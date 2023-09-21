@@ -4,11 +4,15 @@ import { Provider } from 'react-redux'
 import App from './App'
 import * as serviceWorker from './serviceWorker'
 import { BrowserRouter as Router } from 'react-router-dom'
+import ReactGA from 'react-ga';
 
 import { store, persistor } from './redux/store'
 import { PersistGate } from 'redux-persist/integration/react'
 
 import './index.css'
+
+const trackingId = "YOUR_GOOGLE_ANALYTICS_TRACKING_ID"; // Replace with your Google Analytics tracking ID
+ReactGA.initialize(trackingId);
 
 ReactDOM.render(
   <StrictMode>
